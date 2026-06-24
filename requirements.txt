@@ -1,0 +1,17 @@
+# --- Data collection ---
+praw>=7.7              # Reddit API wrapper (reddit_collect.py)
+python-dotenv>=1.0     # load REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET / GROQ_API_KEY from a .env file
+
+# --- Data handling ---
+pandas>=2.0
+
+# --- Annotation assistance (AI Tool Plan: Llama 3.1 70B via Groq) ---
+groq>=0.9
+
+# --- Evaluation (macro-F1, per-class precision/recall, confusion matrix) ---
+scikit-learn>=1.3
+
+# --- Modeling: add the lines for whichever approach you're using ---
+# sentence-transformers>=2.7   # embeddings + sklearn classifier on top
+# transformers>=4.40           # fine-tuning a small transformer directly
+# torch>=2.2                   # required by either of the above
