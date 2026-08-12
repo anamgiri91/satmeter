@@ -1,0 +1,274 @@
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--evidence);
+}
+
+.header h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(30px, 4.5vw, 46px);
+  margin: 10px 0 14px;
+  line-height: 1.1;
+}
+
+.subhead {
+  color: var(--ink-dim);
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+.subhead em {
+  color: var(--ink);
+  font-style: normal;
+  border-bottom: 1px dashed var(--hairline);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+textarea {
+  width: 100%;
+  background: var(--surface-raised);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 14px;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: var(--ink-faint);
+}
+
+.input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.examples {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: transparent;
+  border: 1px solid var(--hairline);
+  color: var(--ink-dim);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12.5px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--evidence);
+  color: var(--ink);
+}
+
+.submit-btn {
+  background: var(--evidence);
+  color: #0e1512;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--unsupported);
+  font-size: 13.5px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 380px;
+}
+
+.placeholder {
+  color: var(--ink-faint);
+  font-size: 14px;
+  text-align: center;
+  max-width: 240px;
+  margin-top: 8px;
+}
+
+.gauge-wrap {
+  width: 100%;
+  max-width: 300px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  margin-top: -6px;
+}
+
+.gauge-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.03em;
+}
+
+.predicted-readout {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.score-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+  margin-bottom: 6px;
+}
+
+.score-name {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.score-pct {
+  font-family: var(--font-mono);
+  color: var(--ink-dim);
+}
+
+.bar-track {
+  height: 6px;
+  background: var(--surface-raised);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.score-desc {
+  color: var(--ink-faint);
+  font-size: 12.5px;
+  line-height: 1.4;
+  margin: 6px 0 0;
+}
+
+.score-list li.active .score-name {
+  color: var(--ink);
+}
+
+.score-list li:not(.active) {
+  opacity: 0.6;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  margin-top: 18px;
+  align-self: flex-end;
+}
+
+.footer {
+  margin-top: 44px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-faint);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.footer a {
+  color: var(--evidence);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #14181c;
+  --surface: #1c2228;
+  --surface-raised: #222932;
+  --hairline: #333b43;
+  --ink: #ede7da;
+  --ink-dim: #9aa0a6;
+  --ink-faint: #6b7178;
+
+  --evidence: #4fa98c;
+  --evidence-dim: #345f52;
+  --anecdote: #d9a441;
+  --anecdote-dim: #7a5f29;
+  --unsupported: #c1543e;
+  --unsupported-dim: #6f3327;
+  --emotional: #9575b5;
+  --emotional-dim: #574468;
+
+  --radius: 10px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+a {
+  color: var(--evidence);
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--evidence);
+  outline-offset: 2px;
+}
