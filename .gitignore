@@ -32,3 +32,7 @@ dist/
 
 # Local fine-tuned training checkpoint
 takemeter-finetuned/
+
+# Local virtual environments
+backend/venv/
+frontend/node_modules/
