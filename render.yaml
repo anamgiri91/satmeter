@@ -11,8 +11,9 @@ services:
         value: https://takemeter-web.onrender.com
     healthCheckPath: /api/health
 
-  - type: static
+  - type: web
     name: takemeter-web
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
